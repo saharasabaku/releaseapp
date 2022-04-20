@@ -1,0 +1,13 @@
+
+{% load static %}
+
+{% block illust %}
+    <h3>illust</h3>
+    {% for image in images 
+        arry = [{{ MEDIA_URL }}{{images.picture}}]
+    endfor %}
+        <div>
+            <img src='{{ MEDIA_URL }}{{images.picture}}' width=300>
+        </div>
+    
+{% endblock illust %}

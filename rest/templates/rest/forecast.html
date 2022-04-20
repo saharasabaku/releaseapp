@@ -1,0 +1,263 @@
+{% extends "rest/base.html" %}
+
+{% block content %}
+
+<br>
+<div class="row" style="margin-left: 20px;">
+  <form action="{% url 'forecast' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="display: flex;">
+      <label for="model" lass="">予報を確認したい都市を選んでね！</label>
+      <div class="col-sm-3">
+        <select style="margin-left: auto; width: fit-content;" class="form-control sbc_field" name="city">
+          <option value="">選択してください</option>
+          <option value="Hokkaido,jp">北海道</option>
+          <option value="Tokyo,jp">東京都</option>
+          <option value="Osaka,jp">大阪府</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" name='action' value="save" style="margin-left: auto;">確認！</button>
+    </div>
+  </form>
+</div>
+
+<br>
+
+<hr color="#2F3135">
+
+<br>
+
+<div class="row" style="display: inlign-flex; margin-left:10%;margin-right:10%;">
+    <div style="text-align: left;">
+      <h2 style="text-align: center;">{{ city }} の天気</h2>
+      <h3>{{ year }}年</h3>
+
+      <div style="margin: 15px;">
+        {{ result1.0 }}の{{ result2.0 }}の{{ result3.0 }}で、天気は
+        <script>
+          var str = "{{ result4.0 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.1 }}の{{ result2.1 }}の{{ result3.1 }}で、天気は
+        <script>
+          var str = "{{ result4.1 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.2 }}の{{ result2.2 }}の{{ result3.2 }}で、天気は
+        <script>
+          var str = "{{ result4.2 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.3 }}の{{ result2.3 }}の{{ result3.3 }}で、天気は
+        <script>
+          var str = "{{ result4.3 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.4 }}の{{ result2.4 }}の{{ result3.4 }}で、天気は
+        <script>
+          var str = "{{ result4.4 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.5 }}の{{ result2.5 }}の{{ result3.5 }}で、天気は
+        <script>
+          var str = "{{ result4.5 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.6 }}の{{ result2.6 }}の{{ result3.6 }}で、天気は
+        <script>
+          var str = "{{ result4.6 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.7 }}の{{ result2.7 }}の{{ result3.7 }}で、天気は
+        <script>
+          var str = "{{ result4.7 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.8 }}の{{ result2.8 }}の{{ result3.8 }}で、天気は
+        <script>
+          var str = "{{ result4.8 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.9 }}の{{ result2.9 }}の{{ result3.9 }}で、天気は
+        <script>
+          var str = "{{ result4.9 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.10 }}の{{ result2.10 }}の{{ result3.10 }}で、天気は
+        <script>
+          var str = "{{ result4.10 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.11 }}の{{ result2.11 }}の{{ result3.11 }}で、天気は
+        <script>
+          var str = "{{ result4.11 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.12 }}の{{ result2.12 }}の{{ result3.12 }}で、天気は
+        <script>
+          var str = "{{ result4.12 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.13 }}の{{ result2.13 }}の{{ result3.13 }}で、天気は
+        <script>
+          var str = "{{ result4.13 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+
+      <div style="margin: 15px;">
+        {{ result1.14 }}の{{ result2.14 }}の{{ result3.14 }}で、天気は
+        <script>
+          var str = "{{ result4.14 }}";
+          if(str == "晴れ"){
+            document.write('<strong style="color: #ffa500;">晴れ</strong>')
+          }else if(str == "曇り"){
+            document.write('<strong style="color: #808080;">曇り</strong>')
+          }else if(str == "雨"){
+            document.write('<strong style="color: #1e90ff;">雨</strong>')
+          }
+        </script>
+        です！<br>
+      </div>
+      
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,184 @@
+.title {
+    display: flex;
+}
+
+.titlea {
+    text-decoration: none;
+    color: #ffb87e;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.newp1 {
+    margin-bottom: 0%;
+}
+
+.newp2 {
+    margin-top: 0%;
+    margin-left: 10px;
+}
+
+.menua {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffb87e;
+    border: solid 0px #ffb87e;
+    border-radius: 5px 5px 0px 0px;
+    transition: .4s;
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.menua:hover {
+    background: #ffb87e;
+    color: white;
+}
+
+hr {
+    margin: 0;
+    border: solid 1px #ffb87e;
+    background-color: #ffb87e;
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.menu {
+    text-align: right;
+}
+
+.title {
+    margin: 0%;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 0%;
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.base {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0%;
+    width: auto;
+    height: auto;
+}
+
+.arupakanew {
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.arupakahome {
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.arupakaillust {
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.arupakaabout {
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.footer {
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.illust {
+    display: inline-block;
+}
+
+.illusts {
+    margin-right: 5px;
+}
+
+.menub {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffb87e;
+    border: solid 0px #ffb87e;
+    border-radius: 0px 0px 5px 5px;
+    transition: .4s;
+    ;
+    animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.menub:hover {
+    background: #ffb87e;
+    color: white;
+}
+
+.info {
+    text-align: right;
+}
+
+.infoa {
+    text-decoration: none;
+    color: #a0a0a0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 700px) {
+    .header {
+        text-align: center;
+    }
+    .titlea {
+        text-align: center;
+    }
+    .menu {
+        text-align: center;
+    }
+    .arupakanew {
+        text-align: center;
+    }
+    .arupakahome {
+        text-align: center;
+    }
+    .arupakaillust {
+        text-align: center;
+    }
+    .arupakaabout {
+        text-align: center;
+    }
+    .footer {
+        text-align: center;
+    }
+}
+
+@media(min-width: 701px) {
+    .base {
+        width: 98%;
+        height: 98%;
+    }
+    .main {
+        display: flex;
+    }
+    .arupakanew {
+        display: inline-block;
+        width: 30%;
+    }
+    .arupakahome {
+        display: block;
+        width: 68%;
+    }
+    .arupakaillust {
+        display: inline-block;
+        width: 68%;
+    }
+    .arupakaabout {
+        display: inline-block;
+        width: 68%;
+    }
+}

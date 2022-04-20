@@ -1,0 +1,24 @@
+{% extends "rest/base.html" %}
+
+{% block content %}
+
+<br>
+<div class="row" style="margin-left: 20px;">
+  <form action="{% url 'forecast' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="display: flex;">
+      <label for="model" lass="">予報を確認したい都市を選んでね！</label>
+      <div class="col-sm-3">
+        <select style="margin-left: auto; width: fit-content;" class="form-control sbc_field" name="city">
+          <option value="">選択してください</option>
+          <option value="Hokkaido,jp">北海道</option>
+          <option value="Tokyo,jp">東京都</option>
+          <option value="Osaka,jp">大阪府</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" name='action' value="save" style="margin-left: auto;">確認！</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
